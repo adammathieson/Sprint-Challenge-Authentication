@@ -38,10 +38,10 @@ class SignUp extends React.Component {
     )
   }
 
-  handleSubmit = event => {
-    event.preventDefault();
+  handleSubmit = e => {
+    e.preventDefault();
 
-    const endpoint = 'http://localhost:5000/api/auth/register';
+    const endpoint = 'http://localhost:3300/api/register';
     axios
       .post(endpoint, this.state)
       .then(res => {

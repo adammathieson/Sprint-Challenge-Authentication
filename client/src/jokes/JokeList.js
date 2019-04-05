@@ -1,4 +1,7 @@
 import React from 'react';
+import axios from 'axios';
+
+import requiresAuth from '../auth/requiresAuth';
 
 class JokeList extends React.Component {
     state = {
@@ -14,4 +17,6 @@ class JokeList extends React.Component {
   }
 }
 
-export default JokeList;
+
+
+export default requiresAuth(JokeList);
